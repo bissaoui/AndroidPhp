@@ -41,6 +41,18 @@ public class ListEtudiant extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        setContentView(R.layout.activity_list_etudiant);
+        service = EtudiantService.getInstance();
+        recyclerView = findViewById(R.id.Recycler);
+        etudiantAdapter = new EtudiantAdapter(this,service.getEtudiants());
+        recyclerView.setAdapter(etudiantAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false));
+        loadEtudiant();
+    }
+
+    private void loadEtudiant() {
         StringRequest request = new StringRequest(Request.Method.POST,
                 SplashActivity.insertUrl, new Response.Listener<String>() {
             @Override
@@ -72,17 +84,8 @@ public class ListEtudiant extends AppCompatActivity {
         };
         requestQueue =  Volley.newRequestQueue(getApplicationContext());
         requestQueue.add(request);
-
-        setContentView(R.layout.activity_list_etudiant);
-        service = EtudiantService.getInstance();
-        recyclerView = findViewById(R.id.Recycler);
-        etudiantAdapter = new EtudiantAdapter(this,service.getEtudiants());
-        recyclerView.setAdapter(etudiantAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false));
-
-
-
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu,menu);

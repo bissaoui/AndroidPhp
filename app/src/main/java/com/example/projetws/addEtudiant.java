@@ -69,11 +69,8 @@ public class addEtudiant extends AppCompatActivity  {
     private Button add,upload;
     private Bitmap bitmap;
     private EtudiantService service;
-
     private CircleImageView img;
     String encodedimage="";
-    static final int REQUEST_IMAGE_CAPTURE = 1;
-
     RequestQueue requestQueue;
     String insertUrl = "http://10.0.2.2/Android/ws/createEtudiant.php";
     @Override
