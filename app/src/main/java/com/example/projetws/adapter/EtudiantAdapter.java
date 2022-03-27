@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filterable;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -97,9 +98,9 @@ public class EtudiantAdapter extends RecyclerView.Adapter<EtudiantAdapter.Etudia
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     if (optionss[i].equals("confirmer")){
-                                        Toast.makeText(context,"hello",Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(context,"Bien Supprimer",Toast.LENGTH_SHORT).show();
 
-                                        String urlReq="http://10.0.2.2/Android/ws/deleteEtudiant.php";
+                                        String urlReq="http://192.168.11.109/Android/ws/deleteEtudiant.php";
                                         StringRequest request = new StringRequest(Request.Method.POST,
                                                 urlReq, new Response.Listener<String>() {
                                             @Override
@@ -178,6 +179,7 @@ public class EtudiantAdapter extends RecyclerView.Adapter<EtudiantAdapter.Etudia
         holder.prenom.setText(Etudiants.get(position).getPrenom().toUpperCase());
         holder.ville.setText(Etudiants.get(position).getVille().toUpperCase());
         holder.ide.setText(Etudiants.get(position).getId()+"");
+        holder.sexe.setText(Etudiants.get(position).getSexe());
     }
 
     @Override
@@ -186,8 +188,9 @@ public class EtudiantAdapter extends RecyclerView.Adapter<EtudiantAdapter.Etudia
     }
 
     public class EtudiantViewHolder extends RecyclerView.ViewHolder {
-        TextView ide ,ville,nom,prenom;
+        TextView ide ,ville,nom,prenom, sexe;
         ImageView img;
+
 
         public EtudiantViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -196,6 +199,7 @@ public class EtudiantAdapter extends RecyclerView.Adapter<EtudiantAdapter.Etudia
             nom = itemView.findViewById(R.id.tvNom);
             prenom = itemView.findViewById(R.id.tvPrenom);
             img = itemView.findViewById(R.id.imgE);
+            sexe = itemView.findViewById(R.id.sexeee);
 
         }
     }

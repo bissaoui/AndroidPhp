@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">projetws</string>
+    <string name="app_name">Etudiants</string>
     <array name="villes">
         <item>Safi</item>
         <item>Marrakech</item>

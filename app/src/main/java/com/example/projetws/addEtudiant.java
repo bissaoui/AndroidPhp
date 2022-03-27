@@ -24,6 +24,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -72,7 +73,7 @@ public class addEtudiant extends AppCompatActivity  {
     private CircleImageView img;
     String encodedimage="";
     RequestQueue requestQueue;
-    String insertUrl = "http://10.0.2.2/Android/ws/createEtudiant.php";
+    String insertUrl = "http://192.168.11.109/Android/ws/createEtudiant.php";
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu,menu);
@@ -89,6 +90,9 @@ public class addEtudiant extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN); //show the activity in full screen
+
         setContentView(R.layout.activity_add_etudiant);
         nom = (EditText) findViewById(R.id.nom);
         prenom = (EditText) findViewById(R.id.prenom);

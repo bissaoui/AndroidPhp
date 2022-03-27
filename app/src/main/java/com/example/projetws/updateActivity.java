@@ -19,6 +19,7 @@ import android.provider.MediaStore;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -67,17 +68,20 @@ public class updateActivity extends AppCompatActivity {
     Button btnupd,addm , retour;
     EtudiantService service;
     RequestQueue requestQueue;
-    public static String insertUrl = "http://10.0.2.2/Android/ws/findById.php";
-    String insertUpdate = "http://10.0.2.2/Android/ws/updateEtudiant.php";
+    public static String insertUrl = "http://192.168.11.109/Android/ws/findById.php";
+    String insertUpdate = "http://192.168.11.109/Android/ws/updateEtudiant.php";
 
     String encodedimage="dd";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN); //show the activity in full screen
+
         setContentView(R.layout.activity_update);
         nom = findViewById(R.id.nomm);
-        iddd=findViewById(R.id.idm);
+        iddd = findViewById(R.id.idddd);
         prenom = findViewById(R.id.prenomm);
         rdf = findViewById(R.id.fm);
         rdm = findViewById(R.id.mm);

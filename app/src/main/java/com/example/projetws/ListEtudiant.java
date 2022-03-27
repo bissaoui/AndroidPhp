@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.WindowManager;
 import android.widget.SearchView;
 import android.widget.Toast;
 
@@ -42,6 +43,8 @@ public class ListEtudiant extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN); //show the activity in full screen
 
         setContentView(R.layout.activity_list_etudiant);
         service = EtudiantService.getInstance();

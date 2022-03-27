@@ -33,8 +33,8 @@ import java.util.Map;
 public class SplashActivity extends AppCompatActivity {
     EtudiantService service;
     RequestQueue requestQueue;
-    public static String insertUrl = "http://10.0.2.2/Android/ws/loadEtudiant.php";
-    public static String UrlImage = "http://10.0.2.2/Android/Images/";
+    public static String insertUrl = "http://192.168.11.109/Android/ws/loadEtudiant.php";
+    public static String UrlImage = "http://192.168.11.109/Android/Images/";
 
 
 
