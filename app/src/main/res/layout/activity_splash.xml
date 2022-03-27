@@ -3,7 +3,86 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#277b3d
+"
     android:layout_height="match_parent"
     tools:context=".SplashActivity">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="162dp"
+        android:layout_height="161dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/load"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:fontFamily="@font/pt1"
+        android:text="Futurs Ingénieurs"
+
+        android:textColor="#FFFFFF"
+        android:textSize="39dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="76dp"
+        android:src="@mipmap/bars"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="76dp"
+        android:src="@mipmap/code"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="76dp"
+        android:src="@mipmap/hook"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView4" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="76dp"
+        android:src="@mipmap/engineer"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="301dp"
+        android:layout_height="150dp"
+        android:src="@mipmap/emsi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

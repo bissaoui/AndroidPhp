@@ -90,7 +90,7 @@ public class SplashActivity extends AppCompatActivity {
                 startActivity(intent);
 
             }
-        },500);
+        },4000);
     }
 
     protected void onPause() {

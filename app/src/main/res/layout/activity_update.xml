@@ -8,13 +8,6 @@
     android:layout_height="match_parent"
     tools:context=".updateActivity">
 
-    <TextView
-        android:id="@+id/idm"
-        android:layout_width="10dp"
-        android:layout_height="20dp"
-        android:textSize="20dp"
-    />
-
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
