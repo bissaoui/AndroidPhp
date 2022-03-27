@@ -1,1 +1,1 @@
-# parie Android
+# partie Android
